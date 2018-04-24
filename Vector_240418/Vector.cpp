@@ -75,3 +75,25 @@ int&MyVector::operator[](int index)
 	else
 		return els[index];
 }
+
+bool MyVector :: operator == (MyVector &obj) {
+
+	if (this->cur_size != obj.cur_size)
+		return 0;
+	else
+	{
+		for (int i = 0; i < size(); i++)
+			if (els[i] != obj.els[i])
+				return 0;
+	}
+	return 1;
+}
+
+ostream& operator<<(ostream& os, MyVector v)
+{
+	for (int i = 0; i < v.size(); i++)
+	{
+		os << v[i] << "\t";
+	}
+	return os;
+}

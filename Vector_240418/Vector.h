@@ -19,19 +19,7 @@ public:
 	MyVector operator=(const MyVector &obj);
 	int&operator[](int index);
 
-	bool operator == (MyVector &obj) {
-
-		if (this->cur_size != obj.cur_size)
-			return 0;
-		else
-		{
-			for (int i = 0; i < size(); i++)
-				if (els[i] != obj.els[i])
-					return 0;
-		}
-		return 1;
-			
-	}
+	bool operator == (MyVector &obj);
 	~MyVector();
 	
 	void insert() {
@@ -45,6 +33,7 @@ private:
 	int buf_size;
 	int * els;
 
-protected:
+	friend ostream& operator<<(ostream& os, MyVector v);
+	//cout<< v; cout<< - ofstream, v - myvector
 
 };

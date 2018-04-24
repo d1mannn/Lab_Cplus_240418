@@ -11,8 +11,9 @@ int main()
 	for (int i = 0; i < 10; i++)
 	{
 		v.push_back(i + 1);
-		cout << v.push_back(i + 1) << endl; 
+		//cout << v.push_back(i + 1) << endl; 
 	}
+	cout << v; // прописали friend ostream, чтобы можно было выводить именно так
 	cout << endl;
 	/*for (int i = 0; i < v.size(); i++)
 	{
@@ -37,6 +38,7 @@ int main()
 	if (v2 == v)
 		cout << "HELLO" << endl;
 	cout << endl;
+	
 	system("pause");
 	return 0;
 }
